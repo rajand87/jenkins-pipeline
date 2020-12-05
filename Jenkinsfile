@@ -5,7 +5,7 @@ pipeline {
             args '-v C:/Users/Raja.Naidu/.jenkins/workspace/DockerJen:/root'
             args '-w /root'
         }
-  
+    }
   stages {
     stage('Build') {
       steps {
