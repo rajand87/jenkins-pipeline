@@ -1,9 +1,13 @@
 pipeline {
-  agent none
+  agent {
+    dockerfile true
+  }
+  
   stages {
     stage('Build') {
       steps {
         echo 'Building'
+        sh 'pwd'
       }
     }
     stage('testing') {
