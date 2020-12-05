@@ -1,7 +1,10 @@
 pipeline {
-  agent {
-        docker.image("busybox").withRun('-p 3000:3000')
-    }
+    agent {
+        docker {
+            image 'node:alpine'
+            args '-v C:\Users\Raja.Naidu\.jenkins\workspace\DockerJen:/root'
+            args '-w /root'
+        }
   
   stages {
     stage('Build') {
