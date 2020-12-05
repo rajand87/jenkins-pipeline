@@ -2,8 +2,6 @@ pipeline {
   agent {
         docker.image("busybox").withRun('-p 3000:3000')
     }
-    
-  }
   
   stages {
     stage('Build') {
