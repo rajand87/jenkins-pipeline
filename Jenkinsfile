@@ -22,8 +22,8 @@ pipeline{
         stage('publish'){
             steps {
                 sh 'dotnet publish "$WORKSPACE/src/EAApp/EAApp.csproj"'
-                echo '${env.USER_NAME}'
-                echo '${params.PASSWORD}'
+                echo "${env.USER_NAME}"
+                echo "${params.PASSWORD}"
                 archiveArtifacts artifacts: 'src/EAApp/bin/Debug/netcoreapp3.1/publish/*'
 
             }
