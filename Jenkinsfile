@@ -1,9 +1,8 @@
 pipeline {
     agent {
         docker {
-            image 'node:alpine'
-            args '-v C:/Users/Raja.Naidu/.jenkins/workspace/DockerJen:/root'
-            args '-w /root'
+            image 'busybox'
+            args '-it'
         }
     }
   stages {
